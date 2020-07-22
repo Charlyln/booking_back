@@ -1,6 +1,7 @@
 const express = require("express");
 const sequelize = require("./sequelize");
 const users = require("./routes/user.routes");
+const travels = require("./routes/travel.routes");
 
 var cors = require("cors");
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.use("/users", users);
+app.use("/travels", travels);
 
 app.get("/", (req, res) => {
   res.status(200).send("Here is my checkpoint API!");
