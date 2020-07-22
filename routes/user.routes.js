@@ -41,14 +41,14 @@ users.put("/:uuid", async (req, res) => {
   const uuid = req.params.uuid;
   const { pseudo, avatar } = req.body;
   try {
-    await User.update(
+    const user = await User.update(
       {
         pseudo,
         avatar,
       },
       { where: { uuid } }
     );
-    res.status(201).end();
+    res.status(204).json(user);
   } catch (err) {
     res.status(422).json(err);
   }
