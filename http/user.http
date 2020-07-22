@@ -1,0 +1,29 @@
+GET http://localhost:8080/users
+
+### 
+
+GET http://localhost:8080/users/90464039-f768-4b37-859d-c258c7f76f5f 
+
+
+###
+POST http://localhost:8080/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "pseudo" : "lisa2 Simpson",
+    "avatar" : "https://pepsnews.com/wp-content/uploads/2016/11/what-homer-simpson-taught-us-about-doughnuts.jpg"
+
+}
+
+###
+PUT http://localhost:8080/users/90464039-f768-4b37-859d-c258c7f76f5f HTTP/1.1
+Content-Type: application/json
+
+{
+    "pseudo" : "Lisa4 Simpson",
+    "avatar" : "ok wp-content/uploads/2016/11/what-homer-simpson-taught-us-about-doughnuts.jpg"
+
+}
+
+###
+DELETE http://localhost:8080/users/1cb01819-7d68-4be1-bc5a-0ffb7f6ea45b HTTP/1.1
