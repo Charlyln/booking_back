@@ -13,13 +13,14 @@ bookings.get("/", async (req, res) => {
 });
 
 bookings.post("/", async (req, res) => {
-  const { TravelUuid, UserUuid, startDate, endDate } = req.body;
+  const { TravelUuid, UserUuid, startDate, endDate, accepted } = req.body;
   try {
     const bookings = await Booking.create({
       TravelUuid,
       UserUuid,
       startDate,
       endDate,
+      accepted,
     });
     res.status(201).json(bookings);
   } catch (err) {
