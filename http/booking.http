@@ -1,0 +1,25 @@
+GET http://localhost:8080/bookings/24c1c17c-e467-4285-aed8-cffa4e0177c6
+
+###
+PUT http://localhost:8080/bookings/24c1c17c-e467-4285-aed8-cffa4e0177c6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "accepted" : true
+}
+
+###
+POST https://squicker.herokuapp.com/datas HTTP/1.1
+Content-Type: application/json
+
+{
+    "bloodSugar" : "ok",
+    "weight" : "ok",
+    "mood" : "ok",
+    "appetite" : "ok",
+    "patientUuid": "3421d7cf-c8cd-4cde-9a33-92a0e605fc88"
+
+}
+
+###
+DELETE http://localhost:8080/bookings/86e665ab-45fe-4fd5-bcdc-156303332776 HTTP/1.1

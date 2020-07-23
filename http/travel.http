@@ -1,0 +1,16 @@
+### GET ALL
+GET http://localhost:8080/travels
+
+### POST ONE
+POST http://localhost:8080/travels HTTP/1.1
+Content-Type: application/json
+
+{
+    "content" : "hello",
+    "UserUuid" : "2e27c83a-a1cb-4ac8-ace5-e7e82a37d359",
+    "title" : "hello",
+    "imageUrl" : "https://i.f1g.fr/media/eidos/805x453_crop/2017/05/24/XVM22654fde-4085-11e7-a87f-0e95404dcfa0-805x453.jpg",
+    "content" : "hello",
+    "localisation": "Anglet",
+    "description" : "Équipements Wi-Fi Cuisine"
+}
