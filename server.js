@@ -2,6 +2,8 @@ const express = require("express");
 const sequelize = require("./sequelize");
 const users = require("./routes/user.routes");
 const travels = require("./routes/travel.routes");
+const likes = require("./routes/like.routes");
+const bookings = require("./routes/booking.route")
 
 var cors = require("cors");
 
@@ -16,6 +18,10 @@ app.use(express.static("public"));
 
 app.use("/users", users);
 app.use("/travels", travels);
+app.use("/likes", likes);
+app.use("/bookings", bookings);
+
+require("./models/association");
 
 app.get("/", (req, res) => {
   res.status(200).send("Here is my checkpoint API!");
