@@ -1,6 +1,8 @@
 const express = require("express");
 const users = express.Router();
 const User = require("../models/user.model");
+const Likes = require("../models/like.model");
+
 
 users.get("/", async (req, res) => {
   try {
@@ -14,7 +16,12 @@ users.get("/", async (req, res) => {
 users.get("/:uuid", async (req, res) => {
   const uuid = req.params.uuid;
   try {
-    const user = await User.findOne();
+    const user = await User.findOne({
+      include: [{ model: Likes }],
+      where: {
+        uuid,
+      },
+    });
     res.status(200).json(user);
   } catch (error) {
     res.status(400).json({
