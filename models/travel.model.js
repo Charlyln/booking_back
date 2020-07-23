@@ -12,6 +12,7 @@ const Travel = sequelizeInstance.define("Travel", {
   title: Sequelize.STRING,
   imageUrl: Sequelize.STRING,
   localisation: Sequelize.STRING,
+  description: Sequelize.STRING,
   content: Sequelize.STRING,
 });
 
